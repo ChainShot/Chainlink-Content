@@ -1,0 +1,21 @@
+{
+  "containerId": "6057f9e38a1a393118d268da",
+  "title": "Price Feed",
+  "abiValidations": "$$LOOKUP",
+  "task": "$$LOOKUP",
+  "details": "$$LOOKUP",
+  "id": "6057fa638a1a393118d268db",
+  "type": "CodeStage",
+  "language": "solidity",
+  "languageVersion": "0.7.5",
+  "testFramework": "truffle_with_mocha",
+  "codeFileIds": [
+    "6057fa638a1a393118d268dc",
+    "6057fa638a1a393118d268dd",
+    "60581c138a1a393118d268df"
+  ],
+  "position": 0,
+  "youtubeId": null,
+  "src": null,
+  "forkBlockNumber": 12086400
+}
