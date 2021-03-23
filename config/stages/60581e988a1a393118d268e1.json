@@ -1,0 +1,24 @@
+{
+  "containerId": "6057f9e38a1a393118d268da",
+  "title": "Randomness",
+  "abiValidations": "$$LOOKUP",
+  "task": "$$LOOKUP",
+  "details": "$$LOOKUP",
+  "id": "60581e988a1a393118d268e1",
+  "type": "CodeStage",
+  "language": "solidity",
+  "languageVersion": "0.7.5",
+  "testFramework": "truffle_with_mocha",
+  "codeFileIds": [
+    "60581e988a1a393118d268e2",
+    "60581e988a1a393118d268e3",
+    "60581f178a1a393118d268e5",
+    "60581f5d8a1a393118d268e7",
+    "60581f7f8a1a393118d268e9",
+    "60581fa18a1a393118d268eb"
+  ],
+  "position": 1,
+  "youtubeId": null,
+  "src": null,
+  "forkBlockNumber": 11395144
+}

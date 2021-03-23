@@ -1,0 +1,17 @@
+{
+  "executablePath": "contracts/interfaces/LinkTokenInterface.sol",
+  "name": "LinkTokenInterface.sol",
+  "executable": true,
+  "hasProgress": false,
+  "mode": "sol",
+  "readOnly": true,
+  "testFixture": false,
+  "visible": false,
+  "stageContainerId": "6057f9e38a1a393118d268da",
+  "codeStageIds": [
+    "60581e988a1a393118d268e1"
+  ],
+  "id": "60581f7f8a1a393118d268e9",
+  "initialCode": "$$LOOKUP",
+  "fileLocation": null
+}
