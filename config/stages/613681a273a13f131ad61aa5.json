@@ -1,0 +1,17 @@
+{
+  "type": "CodeStage",
+  "containerId": "6057f9e38a1a393118d268da",
+  "completionMessage": "$$LOOKUP",
+  "title": "Introduction to Oracles",
+  "abiValidations": "$$LOOKUP",
+  "task": "$$LOOKUP",
+  "details": "$$LOOKUP",
+  "position": 0,
+  "id": "613681a273a13f131ad61aa5",
+  "language": null,
+  "testFramework": null,
+  "languageVersion": null,
+  "youtubeId": null,
+  "forkBlockNumber": null,
+  "src": null
+}
