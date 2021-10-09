@@ -1,0 +1,20 @@
+{
+  "containerId": "61563f1d55047b0c35716595",
+  "title": "Pick an Aggregator",
+  "abiValidations": "$$LOOKUP",
+  "task": "$$LOOKUP",
+  "details": "$$LOOKUP",
+  "id": "6156418d55047b0c35716596",
+  "type": "CodeStage",
+  "language": "solidity",
+  "languageVersion": "0.8.4",
+  "testFramework": "truffle_with_mocha",
+  "codeFileIds": [
+    "6156418d55047b0c35716597",
+    "6156418d55047b0c35716598"
+  ],
+  "position": 0,
+  "youtubeId": null,
+  "src": null,
+  "forkBlockNumber": 11395144
+}
