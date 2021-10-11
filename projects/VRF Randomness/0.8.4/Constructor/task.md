@@ -11,7 +11,7 @@ We have to inherit this contract, and use the `VRFConsumerBase` constructor alon
 
 Then, we want to setup for making our request (in the next stage). To make a request, we will need:
 
-1. KeyHash: The unique keyhash that indentifies the Chainlink VRF node.
+1. KeyHash: The unique keyhash that identifies the Chainlink VRF node.
 2. Fee: The LINK fee that we are going to pay the Chainlink node (in JUELS/WEI). Each node will list how much they charge for their services.
 
 ### <emoji id="checkered_flag" /> Your Goal: Create a constructor that uses Chainlink VRF on Mainnet, and add the keyhash and fee global public variables.

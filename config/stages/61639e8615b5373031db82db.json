@@ -1,0 +1,20 @@
+{
+  "containerId": "61639dd715b5373031db82da",
+  "title": "Request",
+  "abiValidations": "$$LOOKUP",
+  "task": "$$LOOKUP",
+  "details": "$$LOOKUP",
+  "id": "61639e8615b5373031db82db",
+  "type": "CodeStage",
+  "language": "solidity",
+  "languageVersion": "0.8.4",
+  "testFramework": "truffle_with_mocha",
+  "codeFileIds": [
+    "61639e8615b5373031db82dc",
+    "61639e8615b5373031db82dd"
+  ],
+  "position": 0,
+  "youtubeId": null,
+  "src": null,
+  "forkBlockNumber": 12086400
+}
