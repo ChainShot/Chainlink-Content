@@ -14,11 +14,11 @@ contract Counter is KeeperCompatibleInterface {
     * Use an interval in seconds and a timestamp to slow execution of Upkeep
     */
     uint public immutable interval;
-    uint public lastTimeStamp;
+    uint public lastTimestamp;
     
     constructor(uint updateInterval) public {
       interval = updateInterval;
-      lastTimeStamp = block.timestamp;
+      lastTimestamp = block.timestamp;
 
       counter = 0;
     }  

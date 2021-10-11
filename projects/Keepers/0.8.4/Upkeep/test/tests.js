@@ -9,13 +9,26 @@ describe('Contract', function () {
         await contract.deployed();
     });
 
-    it('should have checkup return true and perform upkeep update counters', async () => {
-        const tuple = await contract.functions.checkUpkeep("");
-        assert(tuple[0] == true);
+    describe("after the interval", () => {
+        beforeEach(async () => {
+            await hre.network.provider.request({
+                method: "evm_increaseTime",
+                params: [2001],
+            });
+            await hre.network.provider.request({
+                method: "evm_mine"
+            });
+        });
 
-        assert(await contract.counter() == 0)
-        const tx = await contract.performUpkeep("")
-        tx.wait(1)
-        assert(await contract.counter() == 1)
+        it("should need upkeep", async () => {
+            const tuple = await contract.callStatic.checkUpkeep("0x");
+            assert.equal(tuple.upkeepNeeded, true);
+        });
+
+        it('should perform upkeep update counters', async () => {
+            assert.equal((await contract.counter()).toNumber(), 0);
+            await contract.performUpkeep("0x");
+            assert.equal((await contract.counter()).toNumber(), 1);
+        });
     });
 });
