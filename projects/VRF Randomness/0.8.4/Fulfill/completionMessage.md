@@ -1,0 +1,3 @@
+## Amazing work! 
+
+You now know how to get random numbers into your smart contracts, let's move on and learn how to make decentralized event driven triggers...

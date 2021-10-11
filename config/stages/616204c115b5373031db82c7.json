@@ -1,0 +1,21 @@
+{
+  "containerId": "6162049615b5373031db82c6",
+  "title": "Constructor",
+  "abiValidations": "$$LOOKUP",
+  "task": "$$LOOKUP",
+  "details": "$$LOOKUP",
+  "id": "616204c115b5373031db82c7",
+  "type": "CodeStage",
+  "language": "solidity",
+  "languageVersion": "0.8.4",
+  "testFramework": "truffle_with_mocha",
+  "codeFileIds": [
+    "616204c115b5373031db82c8",
+    "616204c115b5373031db82c9"
+  ],
+  "position": 0,
+  "youtubeId": null,
+  "src": null,
+  "forkBlockNumber": 12086400,
+  "completionMessage": "$$LOOKUP"
+}

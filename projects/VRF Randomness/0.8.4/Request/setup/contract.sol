@@ -1,10 +1,9 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.7.5;
+pragma solidity ^0.8.0;
 
-import "@chainlink/contracts/src/v0.7/VRFConsumerBase.sol";
+import "@chainlink/contracts/src/v0.8/VRFConsumerBase.sol";
 
 contract RandomNumberConsumer is VRFConsumerBase {
-    
     bytes32 public keyHash;
     uint256 public fee;
     
@@ -22,21 +21,6 @@ contract RandomNumberConsumer is VRFConsumerBase {
             0x514910771AF9Ca656af840dff83E8264EcF986CA  // LINK Token
         ) 
     {
-        keyHash = 0xAA77729D3466CA35AE8D28B3BBAC7CC36A5031EFDC430821C02BC31A238AF445;
-        fee = 2 * 10 ** 18; // 0.1 LINK (varies by network)
-    }
-
-    /** 
-     * Requests randomness 
-     */
-    function getRandomNumber() public returns (bytes32 requestId) {
-        return requestRandomness(keyHash, fee);
-    }
-
-    /**
-     * Callback function used by VRF Coordinator
-     */
-    function fulfillRandomness(bytes32 requestId, uint256 randomness) internal override {
-        randomResult = randomness;
+        
     }
 }
