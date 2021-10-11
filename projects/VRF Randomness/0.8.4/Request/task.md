@@ -1,24 +1,22 @@
-## VRF Randomness
+## Chainlink VRF Request
 
-We've gone ahead and got you started here. Typically, you'd import from `import "@chainlink/contracts/src/v0.7/VRFConsumerBase.sol";`, but we've added all the contracts to our project here. 
+Great work! Now that we know how to get everything setup, we can work on making a request.
 
-To get started using Chainlink VRF, we have to inherit the `VRFConsumerBase.sol`, this contract includes functionality for making the request to get a random number, and having the Chainlink node respond with the random number.
+Making a request is a 2 transaction process, the requesting transaction made by us, and the callback (or fulfilling) transaction made by the Chainlink node. 
 
-We have to inherit this contract, and use the `VRFConsumerBase` constructor alongside our constructor, and it takes 2 input parameters:
+But remember, we need to fund the contract with LINK before we can make the request! So in essence you can think of it as a 3 transaction process:
 
-1. VRF Coordinator Address: The address of the VRF Coordinator contract (the contract that is going to verify randomness)
-2. LINK token address: The address of the LINK token to pay Chainlink oracle gas. 
+1. Fund contract with LINK
+2. Make a random number request by calling `requestRandomness` inherited by the `VRFConsumerBase`
+3. Wait for the Chainlink node to callback to our `fulfillRandomness` function.
 
-Then, we want to setup for making our request (in the next stage). To make a request, we will need:
+> <emoji id="book" /> We aren't going to send LINK token in our example here, but just know that you'd have to send LINK token to the contract to get a random number. You can follow the [Random Number Tutorial](https://docs.chain.link/docs/intermediates-tutorial/) to see it in action. 
 
-1. KeyHash: The unique keyhash that indentifies the Chainlink VRF node.
-2. Fee: The LINK fee that we are going to pay the Chainlink node (in JUELS/WEI). Each node will list how much they charge for their services.
+### <emoji id="checkered_flag" /> Your Goal: Create a request
 
-### <emoji id="checkered_flag" /> Your Goal: Create a constructor that uses Chainlink VRF on Mainnet, and add the keyhash and fee global public variables.
+See the [chainlink documentation for help](https://docs.chain.link/docs/get-a-random-number/).
 
-See the [chainlink documentation for help.](https://docs.chain.link/docs/get-a-random-number/)
-
-1. Create a contract that inherits `VRFConsumerBase`, and in the `VRFConsumerBase` constructor that takes the mainnet VRF Coordinator and LINK token as inputs. 
-2. Create public variables `bytes32 keyHash` and `uint256 fee` that are associated with the Mainnet Chainlink VRF node. 
-
+1. Create a `public` function called `getRandomNumber` that returns a `bytes32 requestId`.
+2. Have the function call `requestRandomness` and pass it in the `keyHash` and `fee` for parameters. 
+3. Return the `requestId`.
 

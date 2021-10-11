@@ -1,3 +1,5 @@
-## Amazing work! 
+## Requested! 
 
-You now know how to get random numbers into your smart contracts, let's move on and learn how to make decentralized event driven triggers...
+You successfully requested the randomness through the VRF Coordinator. 
+
+Next, an oracle will fulfill that request on a separate transaction and you will need to **store that randomness**.
