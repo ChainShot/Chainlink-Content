@@ -4,7 +4,6 @@ const vrfCoordinatorABI = require("@chainlink/contracts/abi/v0.6/VRFCoordinator.
 
 const LINK_ADDR = "0x514910771AF9Ca656af840dff83E8264EcF986CA";
 const VRF_ADDR = "0xf0d54349aDdcf704F77AE15b96510dEA15cb7952";
-const RANDMONESS_REQUEST_TOPIC = "0x56bd374744a66d531874338def36c906e3a6cf31176eb1e9afd9f1de69725d51";
 
 describe('Contract', function () {
     describe('setup', () => {

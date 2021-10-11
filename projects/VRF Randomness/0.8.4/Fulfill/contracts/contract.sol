@@ -37,6 +37,6 @@ contract RandomNumberConsumer is VRFConsumerBase {
      * Callback function used by VRF Coordinator
      */
     function fulfillRandomness(bytes32, uint256 randomness) internal override {
-        
+        randomResult = randomness;
     }
 }
