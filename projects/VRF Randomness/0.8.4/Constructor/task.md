@@ -1,6 +1,6 @@
 ## VRF Randomness
 
-We've gone ahead and got you started here. Typically, you'd import from `import "@chainlink/contracts/src/v0.7/VRFConsumerBase.sol";`, but we've added all the contracts to our project here. 
+We've gone ahead and got you started here. Typically, you'd import from `import "@chainlink/contracts/src/v0.8/VRFConsumerBase.sol";`, but we've added all the contracts to our project here. 
 
 To get started using Chainlink VRF, we have to inherit the `VRFConsumerBase.sol`, this contract includes functionality for making the request to get a random number, and having the Chainlink node respond with the random number.
 
