@@ -1,25 +1,44 @@
+## Request Path 
 
-Then, we choose which value in the json response by picking a `path` for the `jsonparse` to use, for example:
-```solidity
-request.add("path", "RAW.ETH.USD.VOLUME24HOUR");
+In this example, there's only value we are trying to retrieve: the average rainfall for the state of Iowa in September 2021. This value is available through [the rainfall API](http://rainfall-oracle.com/), however it is buried inside of a bigger JSON object. We'll need to set a request path to  retrieve the data! 
+
+Let's see a simpler example:
+
+```json
+{
+    "ETH": {
+        "USD": {
+            "VOLUME24HOUR": 259610
+        }
+    }
+}
 ```
-        
-Then we can multiply:
+
+<emoji id="point_up" /> To access the volume here, we would need to set a `path` on our request like so:
+
 ```solidity
-int timesAmount = 10**18;
-request.addInt("times", timesAmount);
+request.add("path", "ETH.USD.VOLUME24HOUR");
 ```
 
-Ok! There is a LOT of information here! Let's see you fill in that requesting function!
+This sets a path for the `jsonparse` task to use and it needs to be done before the request is sent to the oracle.
 
-### <emoji id="checkered_flag" /> Your Goal: Add the requesting function!
+## <emoji id="checkered_flag" /> Your Goal: Find the Rainfall
 
-See the [chainlink documentation for help.](https://docs.chain.link/docs/make-a-http-get-request/)
+Given the response from the [rainfall API](http://rainfall-oracle.com/): 
 
-We are going to fill out `requestVolumeData`
+```json
+{
+    "rainfalls": {
+        "iowa": {
+            "september": { 
+                "2021": {
+                    "average": 45720,
+                    "unit": "μm"
+                }
+            }
+        }
+    }
+}
+```
 
-1. Create an object of type `Chainlink.Request` called `request` that uses the jobId identified in the constructor, returns data to this contract, using the `fulfill` function.
-2. Add making an HTTP GET call of `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH&tsyms=USD` to the request object.
-3. Have the `path` of the `jsonparse` task in the request object be `VOLUME24HOUR`.
-4. Add a `times` or `multiply` task of `10**18`;
-5. Finally, `return sendChainlinkRequestTo(oracle, request, fee)`
+You'll need to add a similar path to the one shown above, but to parse out the `45720` value from the response. 
