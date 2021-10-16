@@ -13,7 +13,18 @@ contract APIConsumer is ChainlinkClient {
     uint256 public fee;
     
     constructor() {
+        // Sets the stored address for the LINK token based on the 
+        // public network that the contract is deployed on
         setPublicChainlinkToken();
+        
+        // TODO: set the oracle, jobId, and fee
+    }
+    
+    function requestRainfall() external {
+        
+    }
+    
+    function fulfill(bytes32 _requestId, uint256) public recordChainlinkFulfillment(_requestId) {
         
     }
 }

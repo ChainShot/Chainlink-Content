@@ -18,5 +18,13 @@ contract APIConsumer is ChainlinkClient {
         jobId = "d5270d1c311941d0b08bead21fea7747";
         fee = 0.1 * 10 ** 18; 
     }
+    
+    function requestRainfall() external {
+        
+    }
+    
+    function fulfill(bytes32 _requestId, uint256) public recordChainlinkFulfillment(_requestId) {
+        
+    }
 }
 
