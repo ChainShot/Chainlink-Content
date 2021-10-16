@@ -33,7 +33,7 @@ Let's say we want that `45720` value. To get it, we would need:
 
 So there are a few things to think about when choosing a Chainlink oracle. You can find Chainlink oracles from node listing services like [market.link](https://market.link/). 
 
-## <emoji id="checkered_flag" /> Your Goal: Setup 
+### <emoji id="checkered_flag" /> Your Goal: Setup 
 
 Let's begin by selecting a Chainlink oracle. For this exercise, use the oracle `0x3Aa5ebB10DC797CAC828524e59A333d0A371443c`. 
 
