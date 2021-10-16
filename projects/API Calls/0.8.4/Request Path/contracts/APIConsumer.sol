@@ -23,6 +23,8 @@ contract APIConsumer is ChainlinkClient {
         Chainlink.Request memory request = buildChainlinkRequest(jobId, address(this), this.fulfill.selector);
         
         request.add("get", "http://rainfall-oracle.com/");
+
+        request.add("path", "rainfalls.iowa.september.2021.average");
         
         sendChainlinkRequestTo(oracle, request, fee);
     }

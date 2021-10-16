@@ -6,31 +6,17 @@ import "@chainlink/contracts/src/v0.8/ChainlinkClient.sol";
 contract APIConsumer is ChainlinkClient {
     using Chainlink for Chainlink.Request;
   
-    uint256 public volume;
+    uint256 public rainfall;
     
-    address private oracle;
-    bytes32 private jobId;
-    uint256 private fee;
+    address public oracle;
+    bytes32 public jobId;
+    uint256 public fee;
     
-    constructor() public {
+    constructor() {
         setPublicChainlinkToken();
         oracle = 0x3Aa5ebB10DC797CAC828524e59A333d0A371443c;
         jobId = "d5270d1c311941d0b08bead21fea7747";
         fee = 0.1 * 10 ** 18; 
-    }
-    
-    function requestVolumeData() public returns (bytes32 requestId) {
-        Chainlink.Request memory request = buildChainlinkRequest(jobId, address(this), this.fulfill.selector);
-        
-        request.add("get", "http://rainfall-oracle.com/");
-
-        // request.add("path", "rainfalls.iowa.september.2021.average");
-        
-        return sendChainlinkRequestTo(oracle, request, fee);
-    }
-    
-    function fulfill(bytes32 _requestId, uint256 _volume) public recordChainlinkFulfillment(_requestId) {
-        volume = _volume;
     }
 }
 
