@@ -1,0 +1,19 @@
+{
+  "executablePath": "contracts/Oracle.sol",
+  "name": "Oracle.sol",
+  "executable": true,
+  "hasProgress": false,
+  "mode": "sol",
+  "readOnly": true,
+  "testFixture": false,
+  "visible": false,
+  "stageContainerId": "61639dd715b5373031db82da",
+  "codeStageIds": [
+    "616b107615b5373031db82e1",
+    "616b3ab415b5373031db82e6",
+    "616b3c3315b5373031db82e9"
+  ],
+  "id": "6164cd8815b5373031db82df",
+  "initialCode": "$$LOOKUP",
+  "fileLocation": null
+}
