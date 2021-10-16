@@ -34,16 +34,14 @@ contract APIConsumer is ChainlinkClient {
      * Create a Chainlink request to retrieve API response, find the target
      * data, then multiply by 1000000000000000000 (to remove decimal places from data).
      */
-    function requestVolumeData() public returns (bytes32 requestId) 
-    {
+    function requestVolumeData() public returns (bytes32 requestId) {
         // Start here!
     }
     
     /**
      * Receive the response in the form of uint256
      */ 
-    function fulfill(bytes32 _requestId, uint256 _volume) public recordChainlinkFulfillment(_requestId)
-    {
+    function fulfill(bytes32 _requestId, uint256 _volume) public recordChainlinkFulfillment(_requestId) {
         volume = _volume;
     }
 

@@ -11,9 +11,9 @@ We can make any httpget, httppost API call with Chainlink. Chainlink API calls f
 For example, let's take an HTTP GET API call that returns something like the following:
 
 ```json
-{"price": 
-    {
-    "ETH": 123.123
+{
+    "price": {
+        "ETH": 123.123
     }
 }
 ```
@@ -56,9 +56,7 @@ In our example, we are going to make an API call to `https://min-api.cryptocompa
                 "HIGHDAY": 3543.26,
                 "LOWDAY": 3217.86,
                 "OPEN24HOUR": 3407.72,
-.
-.
-.
+                // etc...
             }
         }
     }
