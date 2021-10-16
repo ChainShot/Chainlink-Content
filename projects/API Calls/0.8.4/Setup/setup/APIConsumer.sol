@@ -13,6 +13,7 @@ contract APIConsumer is ChainlinkClient {
     uint256 public fee;
     
     constructor() {
+        setPublicChainlinkToken();
         
     }
 }
