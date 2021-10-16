@@ -17,7 +17,7 @@ function fulfill(bytes32 _requestId, uint256)
 }
 ```
 
-## <emoji id="checkered_flag"> Your Goal: GET Request
+### <emoji id="checkered_flag"> Your Goal: GET Request
 
 Build on the `requestRainfall` function by adding in some lines of code to help identify which of the `tasks` we are going to take advantage of. 
 

@@ -22,7 +22,7 @@ request.add("path", "ETH.USD.VOLUME24HOUR");
 
 This sets a path for the `jsonparse` task to use and it needs to be done before the request is sent to the oracle.
 
-## <emoji id="checkered_flag" /> Your Goal: Find the Rainfall
+### <emoji id="checkered_flag" /> Your Goal: Find the Rainfall
 
 Given the response from the [rainfall API](http://rainfall-oracle.com/): 
 
