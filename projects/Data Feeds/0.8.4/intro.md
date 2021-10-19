@@ -6,7 +6,7 @@ Now that we know a little more about Chainlink & Oracles, let's look at how we c
 
 [Chainlink Data Feeds](https://docs.chain.link/docs/using-chainlink-reference-contracts/) are a way to get data that has already been aggregated by a network of Chainlink oracles. 
 
-![Data Feeds](https://res.cloudinary.com/divzjiip8/image/upload/c_scale,w_500/v1634683013/chainlink/chainlink_feeds.png)
+![Data Feeds](https://res.cloudinary.com/divzjiip8/image/upload/c_scale,w_800/v1634683013/chainlink/chainlink_feeds.png)
 
 Heading over to [data.chain.link](https://data.chain.link/) we can see a visualization of everything the data feeds have to offer, including:
 
@@ -16,7 +16,7 @@ Heading over to [data.chain.link](https://data.chain.link/) we can see a visuali
 4. And who are the protocols sponsoring each data feed
 
 
-![Chainlink Data Feeds](https://res.cloudinary.com/divzjiip8/image/upload/c_scale,w_500/v1634683013/chainlink/data_chain_link.png)
+![Chainlink Data Feeds](https://res.cloudinary.com/divzjiip8/image/upload/c_scale,w_800/v1634683013/chainlink/data_chain_link.png)
 
 Right now, data feeds are sponsored by a group of protocols using the tools. They sponsor collecting the data so that anyone in the community can read from the data feeds! You can learn more about the payment models from this [stack exchange question.](https://ethereum.stackexchange.com/questions/87473/is-chainlinks-price-reference-data-free-to-consume)
 
