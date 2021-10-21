@@ -17,14 +17,9 @@ describe('Capsule', function () {
         [account1] = await ethers.provider.listAccounts(); 
     });
 
-    it("should set the lock date", async () => {
-        const actual = await contract.lockedUntil();
-        assert.equal(actual, lockDate);
-    });
-
-    it("should set the recipient", async () => {
-        const actual = await contract.recipient();
-        assert.equal(actual, account1);
+    it("should store the ether", async () => {
+        const balance = await ethers.provider.getBalance(contract.address);
+        assert(deposit.eq(balance));
     });
 
     describe("depositing twice before unlocking", () => {
@@ -61,12 +56,12 @@ describe('Capsule', function () {
 
             it("should send the ether back to the recipient", async () => {
                 const afterBalance = await ethers.provider.getBalance(account1);
-                assert(afterBalance.sub(beforeBalance).eq(deposit))
+                assert(afterBalance.sub(beforeBalance).eq(deposit));
             });
 
-            it("should set the lock date back to zero", async () => {
-                const actual = await contract.lockedUntil();
-                assert(actual.eq(0));
+            it("should no longer require upkeep", async () => {
+                const [upkeepNeeded] = await contract.callStatic.checkUpkeep("0x");
+                assert.equal(upkeepNeeded, false);
             });
         });
     });

@@ -1,19 +1,11 @@
-## Upkeep
+## Time Capsule
 
-For us to make a Keeper Compatible smart contract, we need it to have 2 functions:
+Let's create a time capsule that will allow us to deposit ether and lock it until a designated time. When that time has been reached, we will use Chainlink Keepers to automatically withdraw those funds. 
 
-1. `checkUpkeep`: Returns a `bool upkeepNeeded, bytes memory performData` where `upkeepNeeded` is `true` if the event has been triggered, and `performData` is optional information to be passed to `performUpkeep`.
-2. `performUpkeep`: Executes the action we want to trigger.
+### <emoji id="checkered_flag" /> Your Goal: Deposit 
 
-We usually import the KeeperCompatibleInterface so we make sure that we don't forget these two functions.
+First, start by completing the `deposit` function. This function is payable, so by default it will accept ether deposits. 
 
-### <emoji id="checkered_flag" /> Your Goal: Make this contract keeper compatible!
+This function should take the `_lockedUntil` value and store it on the smart contract. This value contains the timestamp the capsule is locked until. Create a storage variable to keep track of this timestamp for later. 
 
-We have a contract that has a `counter` variable that is going to be updated every `interval` blocks. Our Chainlink Keepers are going to trigger an update to counter whenever that interval hits. So we 
-
-1. Add the two functions `checkUpkeep` and `performUpkeep` to make this contract keeper compatible. 
-2. `checkUpkeep` should check to see if the current `block.timestamp` minus the `lastTimestamp` is greater than the interval, and return `true` if yes. 
-3. `performUpkeep` should update the `lastTimestamp` and update the `counter` by 1.
-
-> <emoji id="book" /> See the [chainlink documentation for help](https://docs.chain.link/docs/chainlink-keepers/compatible-contracts/).
-
+Lastly, after the deposit has been made, require that new deposits cannot be made until the `_lockedUntil` timestamp has been reached. Any attempt to deposit should revert.

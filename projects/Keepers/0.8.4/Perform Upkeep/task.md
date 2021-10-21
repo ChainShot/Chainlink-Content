@@ -1,11 +1,7 @@
 ## Upkeep
 
-For us to make a Keeper Compatible smart contract, we need it to have 2 functions:
-
-1. `checkUpkeep`: Returns a `bool upkeepNeeded, bytes memory performData` where `upkeepNeeded` is `true` if the event has been triggered, and `performData` is optional information to be passed to `performUpkeep`.
 2. `performUpkeep`: Executes the action we want to trigger.
 
-We usually import the KeeperCompatibleInterface so we make sure that we don't forget these two functions.
 
 ### <emoji id="checkered_flag" /> Your Goal: Make this contract keeper compatible!
 

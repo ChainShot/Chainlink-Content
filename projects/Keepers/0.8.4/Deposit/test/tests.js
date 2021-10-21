@@ -16,15 +16,9 @@ describe('Capsule', function () {
         await contract.deposit(lockDate, { value: deposit });
     });
 
-    it("should set the lock date", async () => {
-        const actual = await contract.lockedUntil();
-        assert.equal(actual, lockDate);
-    });
-
-    it("should set the recipient", async () => {
-        const actual = await contract.recipient();
-        const [expected] = await ethers.provider.listAccounts();
-        assert.equal(actual, expected);
+    it("should store the ether", async () => {
+        const balance = await ethers.provider.getBalance(contract.address);
+        assert(deposit.eq(balance));
     });
 
     describe("depositing twice before unlocking", () => {
