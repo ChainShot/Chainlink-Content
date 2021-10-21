@@ -1,3 +1,5 @@
-## Upkept! 
+## Oh Yeah! <emoji id="ghost" />
 
-Awesome work implementing that keeper! <emoji id="muscle" />
+Now the keeper knows when to perform the upkeep!
+
+In the next stage, allow the keeper to send the depositor back their funds.

@@ -1,3 +1,5 @@
-## Upkept! 
+## Deposit Complete <emoji id="money_with_wings" />
 
-Awesome work implementing that keeper! <emoji id="muscle" />
+Now the capsule **has been locked**! 
+
+Next, let the keeper know when its unlocked.
