@@ -19,6 +19,7 @@ contract Capsule is KeeperCompatibleInterface {
     }
 
     function performUpkeep(bytes calldata) external override {
+        require(block.timestamp > lockedUntil);
         recipient.transfer(address(this).balance);
         delete lockedUntil;
     }   

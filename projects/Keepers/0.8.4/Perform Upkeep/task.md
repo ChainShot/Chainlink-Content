@@ -1,17 +1,12 @@
-## Upkeep
+## Perform Upkeep
 
-2. `performUpkeep`: Executes the action we want to trigger.
+The last Keeper Compatible method we will need to implement is `performUpkeep`. This method will be called by a keeper when our `checkUpkeep` indicates it is time to do so. Unlike `checkUpkeep`, `performUpkeep` will be called as a transaction, therefore it will incur a gas cost on the keeper and charge the capsule in Chainlink tokens.
 
+### <emoji id="checkered_flag" /> Your Goal: Perform Upkeep
 
-### <emoji id="checkered_flag" /> Your Goal: Make this contract keeper compatible!
+The `performUpkeep` should pay out the deposited ether back to the original depositor _only if_ the locked time has been reached. Otherwise, revert.
 
-See the [chainlink documentation for help](https://docs.chain.link/docs/chainlink-keepers/compatible-contracts/).
+Once the pay out is complete, the `checkUpkeep` method should no longer indicate that upkeep is needed (the `bool` return value should be `false`).
 
-We have a contract that has a `counter` variable that is going to be updated every `interval` blocks. Our Chainlink Keepers are going to trigger an update to counter whenever that interval hits. So we 
-
-1. Add the two functions `checkUpkeep` and `performUpkeep` to make this contract keeper compatible. 
-2. `checkUpkeep` should check to see if the current `block.timestamp` minus the `lastTimestamp` is greater than the interval, and return `true` if yes. 
-3. `performUpkeep` should update the `lastTimestamp` and update the `counter` by 1.
-
-
+> <emoji id="thinking_face" /> You will need to keep track of the original depositor in the `deposit` method in order to pay them out in `performUpkeep`.
 

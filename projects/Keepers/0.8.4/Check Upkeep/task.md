@@ -1,20 +1,15 @@
-## Upkeep
+## Check Upkeep
 
-`checkUpkeep`: Returns a `bool upkeepNeeded, bytes memory performData` where `upkeepNeeded` is `true` if the event has been triggered, and `performData` is optional information to be passed to `performUpkeep`.
+Now comes the first of the Keeper Compatible methods, `checkUpkeep`! This is a method that Chainlink expects every Chainlink Keeper to implement. You must implement it in order to be Keeper Compatible. 
 
+The method `checkUpkeep` will be called by a keeper as a query to see whether or not your contract requires upkeep. In this case, our contract requires upkeep if the funds are ready to be withdrawn. Once they are ready, this method should return true! 
 
-> <emoji id="face_with_monocle"/> Here, we are inheriting from the `KeeperCompatibleInterface` so we make sure that we don't forget these two functions!
+> <emoji id="face_with_monocle"/> Notice we are inheriting from the `KeeperCompatibleInterface` so we make sure that we don't forget to implement the keeper compatible functions!
 
-### <emoji id="checkered_flag" /> Your Goal: Make this contract keeper compatible!
+### <emoji id="checkered_flag" /> Your Goal: Check Upkeep
 
-See the [chainlink documentation for help](https://docs.chain.link/docs/chainlink-keepers/compatible-contracts/).
+This method will periodically be called by the Chainlink Keeper. Your goal is to indicate when the funds are ready to be withdrawn. Return `true` when the `_lockedUntil` timestamp has been reached and not before then. 
 
-We have a contract that has a `counter` variable that is going to be updated every `interval` blocks. Our Chainlink Keepers are going to trigger an update to counter whenever that interval hits. So we 
+The `bool` indicating whether or not the contract requires upkeep will be the first return value. The second return value (`bytes memory`) allows us to specify more information we'd like to send to the `performUpkeep` method later. For our use case, this is not necessary. You can return `"0x"` for this value.
 
-1. Add the two functions `checkUpkeep` and `performUpkeep` to make this contract keeper compatible. 
-2. `checkUpkeep` should check to see if the current `block.timestamp` minus the `lastTimestamp` is greater than the interval, and return `true` if yes. 
-3. `performUpkeep` should update the `lastTimestamp` and update the `counter` by 1.
-
-> <emoji id="book" /> See the [chainlink documentation for help](https://docs.chain.link/docs/chainlink-keepers/compatible-contracts/).
-
-
+> <emoji id="book" /> Be sure to check out the [chainlink documentation](https://docs.chain.link/docs/chainlink-keepers/compatible-contracts/) for more information on keeper contracts.

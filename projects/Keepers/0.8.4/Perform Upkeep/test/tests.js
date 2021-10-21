@@ -22,6 +22,10 @@ describe('Capsule', function () {
         assert(deposit.eq(balance));
     });
 
+    it("should not allow upkeep", async () => {
+        await expect(contract.performUpkeep("0x")).to.be.reverted;
+    });
+
     describe("depositing twice before unlocking", () => {
         it("should not be allowed", async () => {
             await expect(contract.deposit(lockDate, { value: deposit })).to.be.reverted;
