@@ -25,16 +25,10 @@ contract RandomNumberConsumer is VRFConsumerBase {
         fee = 0.1 * 10 ** 18; 
     }
 
-    /** 
-     * Requests randomness 
-     */
     function getRandomNumber() public returns (bytes32) {
 
     }
 
-    /**
-     * Callback function used by VRF Coordinator
-     */
     function fulfillRandomness(bytes32, uint256) internal override {
 
     }

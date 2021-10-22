@@ -12,11 +12,8 @@ But remember, we need to fund the contract with LINK before we can make the requ
 
 > <emoji id="book" /> We aren't going to send LINK token in our example here, but just know that you'd have to send LINK token to the contract to get a random number. You can follow the [Random Number Tutorial](https://docs.chain.link/docs/intermediates-tutorial/) to see it in action. 
 
-### <emoji id="checkered_flag" /> Your Goal: Create a request
+### <emoji id="checkered_flag" /> Your Goal: Create a Request
 
-See the [chainlink documentation for help](https://docs.chain.link/docs/get-a-random-number/).
+Modify the `getRandomNumber` method to `requestRandomness` and pass it in the `keyHash` and `fee` for its parameters. This method will return a `bytes32` request ID. Return this value.
 
-1. Create a `public` function called `getRandomNumber` that returns a `bytes32 requestId`.
-2. Have the function call `requestRandomness` and pass it in the `keyHash` and `fee` for parameters. 
-3. Return the `requestId`.
-
+> <emoji id="book" /> Take a look at the [Chainlink documentation](https://docs.chain.link/docs/get-a-random-number/) for further details.

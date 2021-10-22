@@ -23,19 +23,13 @@ contract RandomNumberConsumer is VRFConsumerBase {
         ) 
     {
         keyHash = 0xAA77729D3466CA35AE8D28B3BBAC7CC36A5031EFDC430821C02BC31A238AF445;
-        fee = 2 * 10 ** 18; // 0.1 LINK (varies by network)
+        fee = 0.1 * 10 ** 18; 
     }
 
-    /** 
-     * Requests randomness 
-     */
     function getRandomNumber() public returns (bytes32) {
         return requestRandomness(keyHash, fee);
     }
 
-    /**
-     * Callback function used by VRF Coordinator
-     */
     function fulfillRandomness(bytes32, uint256 randomness) internal override {
         randomResult = randomness;
     }

@@ -18,4 +18,12 @@ contract RandomNumberConsumer is VRFConsumerBase {
     constructor() VRFConsumerBase() {
         
     }
+    
+    function getRandomNumber() public returns (bytes32) {
+
+    }
+    
+    function fulfillRandomness(bytes32, uint256) internal override {
+
+    }
 }
