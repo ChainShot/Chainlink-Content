@@ -4,7 +4,17 @@ Now that we can interact with the contract, all we have to do is call the `lates
 
 ### <emoji id="checkered_flag" /> Your Goal: Get the latest price function
 
-Create a `public view` function called `getLatestPrice` that returns an `int` and calls the `getLatestPrice` function on the price feed contract.
+Complete the `getLatestPrice` function to get the latest price of ETH/USD. 
 
-If you get stuck, check out the [Chainlink documentation for reference](https://docs.chain.link/docs/get-the-latest-price/).
+There is method available on the priceFeed called `latestRoundData` which will return a tuple with five values in it: 
+
+```solidity
+(uint80 roundID, 
+int price, // <-- this is the one we want to return
+uint startedAt,
+uint timeStamp,
+uint80 answeredInRound)
+```
+
+> <emoji id="book" /> If you get stuck, check out the [Chainlink documentation for reference](https://docs.chain.link/docs/get-the-latest-price/).
 

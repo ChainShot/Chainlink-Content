@@ -7,4 +7,7 @@ contract PriceConsumerV3 {
     // ETH USD aggregator on the ETH Mainnet Chain
     AggregatorV3Interface public priceFeed = AggregatorV3Interface();
     
+    function getLatestPrice() external view returns (int) {
+        
+    }
 }
