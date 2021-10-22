@@ -1,8 +1,8 @@
-## Getting the latest price
+## Latest Price
 
 Now that we can interact with the contract, all we have to do is call the `latestRoundData` function. Let's call that so that our contract can report the latest price of Ethereum in terms of USD.
 
-### <emoji id="checkered_flag" /> Your Goal: Get the latest price function
+### <emoji id="checkered_flag" /> Your Goal: Complete the Function
 
 Complete the `getLatestPrice` function to get the latest price of ETH/USD. 
 
