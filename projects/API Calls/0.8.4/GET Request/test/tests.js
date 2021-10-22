@@ -45,7 +45,7 @@ describe('Contract', function () {
         });
 
         it('should have made the request to the oracle', async () => {
-            const expectedRequest = "0x63676574781b687474703a2f2f7261696e66616c6c2d6f7261636c652e636f6d2f";
+            const expectedRequest = "0x63676574781b687474703a2f2f7261696e66616c6c2d6f7261636c652e636f6d";
             const request = await oracle.request();
             assert.include(request, expectedRequest);
         });
