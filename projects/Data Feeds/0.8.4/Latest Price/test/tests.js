@@ -12,8 +12,7 @@ describe('Contract', function () {
 
         it('should retrieve the latest ETH/USD price', async () => {
             const price = await contract.getLatestPrice();
-            let expectedPrice = "178504000000";
-            assert(price === expectedPrice, "Did not receive the expected price from the PriceConsumer! Did you call priceFeed.latestRoundData?");
+            assert(price.eq("178504000000"), "Did not receive the expected price from the PriceConsumer! Did you call priceFeed.latestRoundData?");
         });
     });
 });
