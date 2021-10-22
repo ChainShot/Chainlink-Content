@@ -10,10 +10,10 @@ describe('Contract', function () {
             await contract.deployed();
         });
 
-        it('should find the ETH / USD address', async () => {
+        it('should retrieve the latest ETH/USD price', async () => {
             const price = await contract.getLatestPrice();
             let expectedPrice = "178504000000";
-            assert(price == expectedPrice);
+            assert(price === expectedPrice, "Did not receive the expected price from the PriceConsumer! Did you call priceFeed.latestRoundData?");
         });
     });
 });
