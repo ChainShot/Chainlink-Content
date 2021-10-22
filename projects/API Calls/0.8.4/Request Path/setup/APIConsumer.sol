@@ -13,8 +13,9 @@ contract APIConsumer is ChainlinkClient {
     uint256 public fee;
     
     constructor() {
-        // Sets the stored address for the LINK token based on the 
+        // this sets the stored address for the LINK token based on the 
         // public network that the contract is deployed on
+        // (no need to change anything here)
         setPublicChainlinkToken();
         
         // TODO: set the oracle, jobId, and fee

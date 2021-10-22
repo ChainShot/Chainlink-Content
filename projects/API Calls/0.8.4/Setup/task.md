@@ -33,9 +33,11 @@ Let's say we want that `45720` value. To get it, we would need:
 
 So there are a few things to think about when choosing a Chainlink oracle. You can find Chainlink oracles from node listing services like [market.link](https://market.link/). 
 
+> <emoji id="warning" /> There will be some compilation warnings surfacing from the inherited `ENSInterface` in this tutorial. You can ignore these warnings. 
+
 ### <emoji id="checkered_flag" /> Your Goal: Setup 
 
-Let's begin by selecting a Chainlink oracle. For this exercise, use the oracle `0x3Aa5ebB10DC797CAC828524e59A333d0A371443c`. 
+Modify the three storage variables: `oracle`, `jobId`, and `fee`. Begin by selecting a Chainlink oracle. For this exercise, use the oracle `0x3Aa5ebB10DC797CAC828524e59A333d0A371443c`. 
 
 Next, set a `jobId`. This particular job will have a set of `tasks` or `adapters`, which you can [learn more about here](?tab=details), For this exercise, use the jobId `d5270d1c311941d0b08bead21fea7747`. 
 

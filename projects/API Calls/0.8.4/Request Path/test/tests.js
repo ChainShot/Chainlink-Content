@@ -47,25 +47,11 @@ describe('Contract', function () {
         });
 
         it('should have made the request to the oracle', async () => {
-            const url = "0x63676574781b687474703a2f2f7261696e66616c6c2d6f7261636c652e636f6d2f";
+            const url = "0x63676574781b687474703a2f2f7261696e66616c6c2d6f7261636c652e636f6d";
             const path = "647061746878257261696e66616c6c732e696f77612e73657074656d6265722e323032312e61766572616765";
             const request = await oracle.request();
-            assert.equal(request, url + path);
-        });
-
-        describe("after fulfilling the request", async () => {
-            const rainfall = 45720;
-            before(async () => {
-                const oracleSigner = await impersonate(oracle.address);
-                await setBalance(oracle.address, ethers.utils.parseEther("1"));
-                const event = receipt.events.find(x => x.event === "ChainlinkRequested");
-                await contract.connect(oracleSigner).fulfill(event.args.id, rainfall);
-            });
-
-            it("should set the rainfall", async () => {
-                const actual = await contract.rainfall();
-                assert.equal(actual, rainfall);
-            });
+            assert(request.indexOf(url) >= 0, "Did not properly parse the rainfall. Your path should start with rainfalls.iowa... and resolve the average.");
+            assert(request.endsWith(path), "Did not properly parse the rainfall. Your path should start with rainfalls.iowa... and resolve the average.");
         });
     });
 });
