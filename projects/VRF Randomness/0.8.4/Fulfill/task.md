@@ -6,6 +6,6 @@ Now that the VRF Coordinator has received our randomness request, a Chainlink No
 
 ### <emoji id="checkered_flag" /> Your Goal: Complete the Callback Function 
 
-Create an `internal override` callback function called `fulfillRandomness` (this is the function the Chainlink node looks for) that takes a `bytes32` and `uint256` as parameters.
+Add a public unsigned integer storage variable called `randomResult`. This random result will be the value that the oracle provides us by calling the contract at `fulfillRandomness`.
 
-Save the random result to a public `uint` named `randomResult`. 
+When the oracle calls this method back store the value in `randomResult`.
