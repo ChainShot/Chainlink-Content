@@ -12,6 +12,6 @@ describe('Contract', function () {
     it('should find the ETH / USD address', async () => {
         const ethUsdAddress = await contract.priceFeed();
         let expectedAddress = "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419";
-        assert(ethUsdAddress == expectedAddress);
+        assert(ethUsdAddress === expectedAddress, "The Price Feed was not the expected address! Find the Ethereum Mainnet ETH/USD Price Feed.");
     });
 });
