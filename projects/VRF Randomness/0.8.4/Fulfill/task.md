@@ -6,6 +6,6 @@ Now that the VRF Coordinator has received our randomness request, a Chainlink No
 
 ### <emoji id="checkered_flag" /> Your Goal: Complete the Callback Function 
 
-Add a public unsigned integer storage variable called `randomResult`. This random result will be the value that the oracle provides us by calling the contract at `fulfillRandomness`.
+Add a public unsigned integer storage variable called `randomResult`. This random result will be the second argument to the `fullfillRandomness` method when the oracle calls it to fulfill the request (the first argument is the request ID).
 
-When the oracle calls this method back store the value in `randomResult`.
+Take this random value provided by the oracle and store the value in `randomResult`.

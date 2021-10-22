@@ -14,6 +14,6 @@ But remember, we need to fund the contract with LINK before we can make the requ
 
 ### <emoji id="checkered_flag" /> Your Goal: Create a Request
 
-Modify the `getRandomNumber` method to `requestRandomness` and pass it in the `keyHash` and `fee` for its parameters. This method will return a `bytes32` request ID. Return this value.
+Modify the `getRandomNumber` method to call the inherited method `requestRandomness` and pass it in the `keyHash` and `fee` for its parameters. This method will return a `bytes32` request ID. Return this value.
 
 > <emoji id="book" /> Take a look at the [Chainlink documentation](https://docs.chain.link/docs/get-a-random-number/) for further details.
