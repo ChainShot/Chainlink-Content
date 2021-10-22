@@ -1,15 +1,19 @@
 {
-  "executablePath": "contracts/contract.sol",
-  "name": "contract.sol",
+  "executablePath": "contracts/Capsule.sol",
+  "name": "Capsule.sol",
   "testFixture": false,
   "stageContainerId": "6163894015b5373031db82d4",
   "codeStageIds": [
-    "6163899915b5373031db82d5"
+    "6163899915b5373031db82d5",
+    "616f4d4b15b5373031db82eb",
+    "616f4d4f15b5373031db82ed"
   ],
   "id": "6163899915b5373031db82d7",
   "initialCode": "$$LOOKUP",
   "mode": "sol",
   "visible": true,
   "executable": true,
-  "hasProgress": true
+  "hasProgress": true,
+  "fileLocation": null,
+  "readOnly": null
 }

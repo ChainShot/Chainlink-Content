@@ -12,11 +12,7 @@ This leads us into the [basic request model](https://docs.chain.link/docs/archit
 
 2. In a 2nd transaction, the Chainlink node/oracle makes it's own transaction populating the contract with the data or output of the computation. 
 
-<br/>
-<p align="center">
-<img src="./../../img/basic_request.gif" width="500" alt="Basic Request Model">
-</p>
-<br/>
+![Data Feeds](https://res.cloudinary.com/divzjiip8/image/upload/c_scale,w_800/v1634683013/chainlink/basic_request.png)
 
 This means that Chainlink features that follow the request model are asynchronous, and we won't get a response in the same block. This is especially advantageous when working with randomness since we don't want people to be able to cancel transactions if they don't like the random number. 
 
