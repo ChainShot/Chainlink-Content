@@ -12,8 +12,8 @@ describe('Contract', function () {
 
         it('should have the right fee and keyhash', async () => {
             const fee = await contract.fee();
-            const expectedFee = ethers.utils.parseEther("0.1");
-            assert(fee.eq(expectedFee), `Did not get the correct fee! It should .1 LINK, you provided: ${fee.toString()}`);
+            const expectedFee = ethers.utils.parseEther("2");
+            assert(fee.eq(expectedFee), `Did not get the correct fee! It should 2 LINK, you provided: ${fee.toString()}`);
             const keyhash = await contract.keyHash();
             const expectedKeyHash = "0xAA77729D3466CA35AE8D28B3BBAC7CC36A5031EFDC430821C02BC31A238AF445";
             assert(keyhash.toLowerCase() === expectedKeyHash.toLowerCase());

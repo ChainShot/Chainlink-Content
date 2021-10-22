@@ -14,9 +14,9 @@ Then, we want to setup for making our request (in the next stage). To make a req
 
 ### <emoji id="checkered_flag" /> Your Goal: Complete the Constructor
 
-Pass the two required parameters to the `VRFConsumerBase` in the order listed above. You can find the addresses in the constructor comments.
+Pass the Ethereum Mainnet VRF Coordinator and Link Token addresses to the `VRFConsumerBase` constructor. You can find these [addresses here](https://docs.chain.link/docs/vrf-contracts/).
 
-Modify the storage varaiables, `keyHash` and `fee`. The `keyHash` can be found in the comments as well, while the fee should be `.1` LINK. Keep in mind that LINK is 18 decimals.
+In the constructor, modify both existing storage varaiables: `keyHash` and `fee`. The `keyHash` and LINK fee for the Ethereum Mainnet can be found in the above documentation as well. Keep in mind that LINK is 18 decimals.
 
 > <emoji id="book" /> See the [chainlink documentation](https://docs.chain.link/docs/get-a-random-number/) for any additional information.
 
