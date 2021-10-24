@@ -1,10 +1,10 @@
 We've gone ahead and got you started here. Typically, you'd import from `import "@chainlink/contracts/src/v0.7/VRFConsumerBase.sol";`, but we've added all the contracts to our project here. 
 
-To get started using Chainlink VRF, we have to inherit the `VRFConsumerBase.sol`, this contract includes functionality for making the request to get a random number, and having the Chainlink node respond with the random number.
+To get started using Chainlink VRF, we have to inherit the `VRFConsumerBase.sol`. This contract includes functionality for making the request to get a random number, and having the Chainlink node respond with the random number.
 
 We have to inherit this contract, and use the `VRFConsumerBase` constructor alongside our constructor, and it takes 2 input parameters:
 
-1. VRF Coordinator Address: The address of the VRF Coordinator contract (the contract that is going to verify randomness)
+1. VRF Coordinator Address: The address of the VRF Coordinator contract (the contract that is going to verify randomness).
 2. LINK token address: The address of the LINK token to pay Chainlink oracle gas. 
 
 Then, we want to setup for making our request (in the next stage). To make a request, we will need:

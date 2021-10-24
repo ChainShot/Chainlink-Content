@@ -22,7 +22,7 @@ Right now, data feeds are sponsored by a group of protocols using the tools. The
 
 All we have to do to read one of these data fees and consume the data into our own contracts is to:
 
-1. Import the AggregatorV3Interface
+1. Import the `AggregatorV3Interface`
 2. Choose the address of the data feed contract
 3. Call `latestRoundData` on the contract
 
@@ -36,4 +36,4 @@ You can alternatively use the [Feeds Registry](https://docs.chain.link/docs/feed
 
 Let's get started just picking a data feed. 
 
-If you want to try this all out in remix when you're done, you can follow along the [Chainlink basics tutorial](https://docs.chain.link/docs/beginners-tutorial/) as well. 
+If you want to try this all out in Remix when you're done, you can follow along the [Chainlink basics tutorial](https://docs.chain.link/docs/beginners-tutorial/) as well. 

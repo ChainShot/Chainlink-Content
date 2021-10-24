@@ -31,6 +31,6 @@ In order to setup our Keeper compatible contract, we need to do the follow.
 1. Import the Keeper Compatible Interface
 2. Register our contract with the [Keeper Registry](https://keepers.chain.link/)
 
-The Keeper registry is an on-chain contract that connects all the Chainlink Keepers to all the jobs they are working on. In order to register our jobs to be triggered by Chainlink nodes, we have to fund something called a "job" from the Keeper compatible contract and fund it with LINK. Unlike the Chainlink VRF which follows a request model, Chainlink Keepers follows a subscription model. As long as your "job" on the keeper contract contains LINK, its funded and will execute jobs!
+The Keeper registry is an on-chain contract that connects all the Chainlink Keepers to all the jobs they are working on. In order to register our jobs to be triggered by Chainlink nodes, we have to fund something called a "job" from the Keeper compatible contract and fund it with LINK. Unlike the Chainlink VRF which follows a request model, Chainlink Keepers follows a subscription model. As long as your "job" on the Keeper contract contains LINK, it's funded and will execute jobs!
 
 We won't go through funding our jobs with LINK, but if you want to follow along the [Chainlink documentation](https://docs.chain.link/docs/chainlink-keepers/introduction/), it will show you how to do everything. 

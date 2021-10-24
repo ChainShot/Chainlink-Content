@@ -55,5 +55,5 @@ Smart contracts that use oracles are often known as [Hybrid Smart Contracts](htt
 
 We need to have both our logic (written in solidity) and our data/external computation (retrieved by Chainlink/Oracles) in a decentralized context.
 
-Hit next to move onto the what tools we can use to get this data!
+Hit next to move on to what tools we can use to get this data!
 

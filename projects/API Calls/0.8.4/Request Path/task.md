@@ -1,6 +1,6 @@
 ## Request Path 
 
-In this example, there's only value we are trying to retrieve: the average rainfall for the state of Iowa in September 2021. This value is available through [the rainfall API](http://rainfall-oracle.com/), however it is buried inside of a bigger JSON object. We'll need to set a request path to  retrieve the data! 
+In this example, there's only one value we are trying to retrieve: **the average rainfall for the state of Iowa in September 2021**. This value is available through [the rainfall API](http://rainfall-oracle.com/), however it is buried inside of a bigger JSON object. We'll need to set a request path to  retrieve the data! 
 
 Let's see a simpler example:
 

@@ -2,7 +2,7 @@ Now that we know what oracles are, what they do, and why we need them, we can go
 
 # What is Chainlink? 
 
-Chainlink is a decentralized oracle network for retrieving off-chain data, and executing off-chain computation. Decentralized oracle networks (DONs) can be customized to do relatively anything to empower smart contracts to have unlimited customization. The Chainlink comes packed with a few features that are just plug-and-play, ready to go, and without any work from a developers end! 
+Chainlink is a decentralized oracle network for retrieving off-chain data, and executing off-chain computation. Decentralized oracle networks (DONs) can be customized to do relatively anything to empower smart contracts to have unlimited customization. Chainlink comes packed with a few features that are just plug-and-play, ready to go, and require no work from a developer's end! 
 
 ### 1. Chainlink Data Feeds
 
@@ -32,7 +32,7 @@ Chainlink is a decentralized oracle network for retrieving off-chain data, and e
 </p>
 <br/>
 
-[Chainlink Keepers](https://docs.chain.link/docs/chainlink-keepers/introduction/) is a network of oracles delivering event driven decentralized computation. Right now, in order for the blockchain to change state, someone has to trigger a transaction. Chainlink Keepers allow us to do this in a decentralized context, allowing for us to have contract interact with each other programmatically. 
+[Chainlink Keepers](https://docs.chain.link/docs/chainlink-keepers/introduction/) is a network of oracles delivering event driven decentralized computation. Right now, in order for the blockchain to change state, someone has to trigger a transaction. Chainlink Keepers allow us to do this in a decentralized context, allowing for us to have contracts interact with each other programmatically. 
 
 ### 4. Chainlink API Calls
 

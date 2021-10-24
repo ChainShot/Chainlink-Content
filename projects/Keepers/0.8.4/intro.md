@@ -14,17 +14,19 @@ You could do a few things to make sure this happens.
 
 2. Rely on someone else's infrastructure (maybe paid) to do so.
 
+The above two are great routes to go, but you're now at the mercy of centralization. Even more-so, if you're a decentralized protocol looking to trigger event based transactions, you shouldn't rely on a centralized infrastructure since you don't have to!
+
 3. Use the collaborative decentralized Chainlink Keepers.
 
-Chainlink keepers allow us to trigger event driven transactions in a decentralized context. This is a great route to go, but you're now at the mercy of that organization. Even more-so, if you're a decentralized protocol looking to trigger event based transactions, you shouldn't rely on a centralized infrastructure since you don't have to!
+Chainlink Keepers allow us to trigger event driven transactions in a decentralized context. 
 
 # Setting up a Keeper Compatible Contract
 
-In order to setup our Keeper compatible contract, we need to do the follow.
+In order to set up our Keeper compatible contract, we need to do the follow.
 
-1. Import the Keeper Compatible Interface
+1. Import the `Keeper Compatible Interface`
 2. Register our contract with the [Keeper Registry](https://keepers.chain.link/)
 
-The Keeper registry is an on-chain contract that connects all the Chainlink Keepers to all the jobs they are working on. In order to register our jobs to be triggered by Chainlink nodes, we have to fund something called a "job" from the Keeper compatible contract and fund it with LINK. Unlike the Chainlink VRF which follows a request model, Chainlink Keepers follows a subscription model. As long as your "job" on the keeper contract contains LINK, its funded and will execute jobs!
+The keeper registry is an on-chain contract that connects all the Chainlink Keepers to all the jobs they are working on. In order to register our jobs to be triggered by Chainlink nodes, we have to fund something called a "job" from the keeper compatible contract and fund it with LINK. Unlike the Chainlink VRF, which follows a request model, Chainlink Keepers follows a subscription model. **As long as your "job" on the keeper contract contains LINK, it is funded and will execute jobs!**
 
 We won't go through funding our jobs with LINK, but if you want to follow along the [Chainlink documentation](https://docs.chain.link/docs/chainlink-keepers/introduction/), it will show you how to do everything. 

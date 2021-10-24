@@ -1,12 +1,12 @@
 ## Making API Calls
 
-We can make any httpget, httppost API call with Chainlink. Chainlink API calls follow the basic request model similar to Chainlink VRF. To make an API call, we need the following information.
+We can make any httpget, `httppost` API call with Chainlink. Chainlink API calls follow the basic request model similar to Chainlink VRF. To make an API call, we need the following information.
 
 1. The Chainlink node's oracle contract we want to interact with (yes, we have to choose which node we work with!)
-2. The `jobId` of the Chainlink node. 
+2. The `jobId` of the Chainlink node.
 3. LINK token (for oracle gas)
 4. The API that we want to call
-5. The data that we want to return from the API call.
+5. The data that we want to return from the API call
 
 For example, take a look at [this rainfall API](http://rainfall-oracle.com/), which returns something like this:
 
