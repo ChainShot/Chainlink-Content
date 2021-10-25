@@ -1,8 +1,8 @@
 # Chainlink VRF Continued
 
-Great work! Now that we know how to get everything setup, we can work on making a request.
+Great work! Now that we know how to get everything set up, we can work on making a request.
 
-Making a request is a 2 transaction process, the requesting transaction made by us, and the callback (or fulfilling) transaction made by the Chainlink node. 
+Making a request is a 2-transaction process: the requesting transaction made by us, and the callback (or fulfilling) transaction made by the Chainlink node. 
 
 > But remember, we need to fund the contract with LINK before we can make the request! So in essence you can think of it as a 3 transaction process.
 

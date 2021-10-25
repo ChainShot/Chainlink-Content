@@ -8,7 +8,7 @@ Great work! We now know how to interact with a contract that has had data alread
 
 This leads us into the [basic request model](https://docs.chain.link/docs/architecture-request-model/) of working with Chainlink Oracles. Features that follow the basic request model (like Chainlink VRF and Chainlink API calls) follow a 2 transaction process.
 
-1. The first transaction makes a request to a Chainlink oracle. The requesting transaction [emits an event](https://ethereum.stackexchange.com/questions/12950/what-are-solidity-events-and-how-they-are-related-to-topics-and-logs) that has data in it including, which Chainlink node it wants data/computation from, what kind of data/computation, and how much Oracle gas (LINK) is being paid.
+1. The first transaction makes a request to a Chainlink oracle. The requesting transaction [emits an event](https://ethereum.stackexchange.com/questions/12950/what-are-solidity-events-and-how-they-are-related-to-topics-and-logs) that has data in it including: which Chainlink node it wants data/computation from, what kind of data/computation, and how much Oracle gas (LINK) is being paid.
 
 2. In a 2nd transaction, the Chainlink node/oracle makes it's own transaction populating the contract with the data or output of the computation. 
 
@@ -32,7 +32,7 @@ The Chainlink VRF is an example of a Chainlink feature that follows this request
 
 Now, as we said before, pulling data or computation from a single node is a point of failure and typically we want to avoid doing this. The Chainlink VRF is a bit of an exception, since their is an on-chain contract checking whether or not the number is truly random, so we know it can't be gamed.
 
-You might see a lot of pseudo-randomness methods for getting a random number, like hashing the `block.difficulty` or something. But doing so gives the miners the ability to influence our contracts, and there have been numerous attacks that take advantage of pseudo-randomn methods, so we want to be sure to use true randomness!
+You might see a lot of pseudo-randomness methods for getting a random number, like hashing the `block.difficulty` or something similar. But doing so gives the miners the ability to influence our contracts, and there have been numerous attacks that take advantage of pseudo-randomn methods, so we want to be sure to use true randomness!
 
 Now that you know how valuable Chainlink VRF is and how randomness works on-chain, let's start to implement it!
 

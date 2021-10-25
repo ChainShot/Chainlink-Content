@@ -7,3 +7,5 @@ In our `PriceConsumerV3.sol` contract, we have a `priceFeed` object of the `Aggr
 ### <emoji id="checkered_flag" /> Your Goal: Add the ETH/USD Aggregator
 
 The `priceFeed` variable should be an `AggregatorV3Interface` contract that points to the ETH / USD address on mainnet. You can find all the contract addresses in the [Chainlink documentation](https://docs.chain.link/docs/reference-contracts/). 
+
+> Ignore the `getLatestPrice()` function for now! We will use it in the next stage.

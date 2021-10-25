@@ -6,7 +6,7 @@ Now that we can interact with the contract, all we have to do is call the `lates
 
 Complete the `getLatestPrice` function to get the latest price of ETH/USD. 
 
-There is method on the `priceFeed` called `latestRoundData` which takes no arguments and will return a tuple with five values in it: 
+There is a method on the `priceFeed` called `latestRoundData` which takes no arguments and will return a tuple with five values in it: 
 
 ```solidity
 (uint80 roundID, 
